@@ -4,7 +4,8 @@ const courseController = require('../app/controllers/CourseController')
 
 // courseController.index
 router.get('/create', courseController.create)
-router.get('/:slug', courseController.index)
+router.post('/store', courseController.store)
+router.get('/:slug', courseController.show)
 router.get('/', courseController.index)
 
 module.exports = router
